@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block title %} Contacto OnlyFlans {% endblock title %}
+{% block content %}
+<div class= "container" style="text-align: center;">
+    <h1>Contacto</h1>
+    <form action="{% url 'contacto'%}" method="post">
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
+        <!-- {{form.non_field_errors}} -->
+        <div class="mb-3 text center">
+            {{form.as_p}}
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+    <p style="text-align: center;">**************************************************************************************************************************</p>
+</div>
+
+{% endblock content %}

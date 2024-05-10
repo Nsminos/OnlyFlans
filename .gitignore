@@ -1,1 +1,11 @@
 hito1/
+staticfiles/
+db.sqlite3
+### Django ###
+*.log
+*.pot
+*.pyc
+__Pycache__/
+local_settings.py
+db.sqlite3-journal
+media
