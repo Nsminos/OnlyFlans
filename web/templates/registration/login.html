@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% block contenido %}
-
+{% block content %}
+<div class="container">
   {% if form.errors %}
     <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
   {% endif %}
@@ -14,7 +14,6 @@
       <p>Por favor inicie sesión para ver esta página.</p>
     {% endif %}
   {% endif %}
-
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <table>
@@ -27,11 +26,12 @@
         <td>{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" class="btn btn-primary" value="Ingresar">
+    <input type="submit" class="btn btn-outline-secondary" disabled value="Ingresar">
     <input type="hidden" name="next" value="{{ next }}">
   </form>
 
   {# Asume que configura la vista de restablecimiento de contraseña en su URLconf #}
   <p><a href="{% url 'password_reset' %}">¿Olvidó su contraseña?</a></p>
+</div>
 
 {% endblock %}
