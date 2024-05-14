@@ -2,17 +2,34 @@
 
 {% block title %} Contacto OnlyFlans {% endblock title %}
 {% block content %}
-<div class= "container" style="text-align: center;">
+<div class= "container">
     <h1>Contacto</h1>
     <form action="{% url 'contacto'%}" method="post">
         {% csrf_token %}
-        <!-- {{form.as_p}} -->
-        <!-- {{form.non_field_errors}} -->
-        <div class="mb-3 text center">
+
+        <div class="mb-3 form-control">
+
             {{form.as_p}}
-        </div>
-        <input type="submit" value="Enviar">
-    </form>
+        
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Password</label>
+                </div>
+                <div class="col-auto">
+                  <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Must be 8-20 characters long.
+                  </span>
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
     <p style="text-align: center;">**************************************************************************************************************************</p>
 </div>
 

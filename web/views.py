@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Flan, ContactForm
+from .models import Flan, ContactForm, Eventos
 from .forms import ContactFormForm, ContactFormModelForm
 
 # Create your views here.
@@ -21,9 +21,11 @@ def acerca(request):
 @login_required
 def bienvenido(request):
     private_flans = Flan.objects.filter(is_private=True)
+    private_eventos = Eventos.objects.filter(is_private=True)
     context = {
-        'private_flans': private_flans
+        'private_flans': private_flans, 'private_eventos': private_eventos
     }
+
     
     return render(request, 'welcome.html', context)
 
@@ -44,6 +46,13 @@ def contacto(request):
     context = {'form':form}
     return render(request, 'contact.html', context)
 
+def eventos(request):
+    eventos = Eventos.objects.filter(is_private=False)
+    context = {
+        'eventos': eventos
+    }
+    
+    return render(request, 'welcome.html', context)
 
 def exito(request):
     return render(request, 'exito.html')

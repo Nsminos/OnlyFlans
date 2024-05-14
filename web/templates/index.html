@@ -55,9 +55,22 @@
         </div>
 </div>
     {% endfor %}
+    
 </div>
     <!--{{ flans }}-->
-
+    <div class="row mt-4 mb-4">
+      {% for eventos in public_eventos %}
+      <div class="col-6 col-md-3">
+        <div class="card mb-4" style="width: 230px; ">
+        <img src="{{ eventos.image_url }}" class="card-img-top" alt="..." style="height: 200px">
+        <div class="card-body">
+          <h5 class="card-title"> {{ eventos.name }}</h5>
+          <p class="card-text"> {{ eventos.description }} </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock content %}
 

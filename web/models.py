@@ -23,3 +23,14 @@ class ContactForm(models.Model):
 
     def __str__(self):
         return f"{self.customer_email} - Mensaje: {self.message}"
+
+class Eventos(models.Model):
+    eventos_uuid = models.UUIDField()
+    name = models.CharField(max_length=64)
+    description = models.TextField()
+    image_url = models.URLField()
+    slug = models.SlugField()
+    is_private = models.BooleanField()
+
+    def __str__(self):
+        return f"{self.name}"

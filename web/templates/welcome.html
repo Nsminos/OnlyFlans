@@ -15,9 +15,14 @@
       </div>
   </div>
 </div>
-<h1>Bienvenido a sus Flanes Privados</h1>
+<div class="row">
+  <div class="col">
+    <h1>Bienvenido a sus Flanes Privados</h1>
+  </div>
+</div>
 
-  <div class="row mt-4 mb-4">
+
+<div class="row mt-4 mb-4">
   {% for flan in private_flans %}
       <div class="col-6 col-md-3">
           <div class="card mb-4" style="width: 230px; ">
@@ -36,8 +41,30 @@
 </div>
   {% endfor %}
 </div>
-  <!--{{ flans }}-->
-
+<div class="row">
+  <div class="col">
+    <h1>Bienvenido a sus Eventos Privados</h1>
+  </div>
+</div>
+<div class="row mt-4 mb-4">
+  {% for eventos in private_eventos %}
+      <div class="col-6 col-md-3">
+          <div class="card mb-4" style="width: 230px; ">
+              <img src="{{ eventos.image_url }}" class="card-img-top" alt="" style="height: 200px">
+          <div class="card-body">
+              <h5 class="card-title">
+              {{ eventos.name }}
+              </h5>
+              <p class="card-text">
+                  {{ eventos.description }}
+              </p>
+              <!-- <a ref="#" class="btn btn-primary">Go somewhere</a>-->
+              
+          </div>
+      </div>
+</div>
+  {% endfor %}
+</div>
 </div>
 {% endblock content %}
 
