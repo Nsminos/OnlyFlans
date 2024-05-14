@@ -47,12 +47,12 @@ def contacto(request):
     return render(request, 'contact.html', context)
 
 def eventos(request):
-    eventos = Eventos.objects.filter(is_private=False)
+    public_eventos = Eventos.objects.filter(is_private=False)
     context = {
-        'eventos': eventos
+        'public_eventos': public_eventos
     }
     
-    return render(request, 'welcome.html', context)
+    return render(request, 'eventos.html', context)
 
 def exito(request):
     return render(request, 'exito.html')

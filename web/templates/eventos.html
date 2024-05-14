@@ -4,19 +4,19 @@
 <div class="container" style="background-color: palevioletred;">
     <div class="row">
         <div class="col">
-        <h1 style="text-align: center;">Queremos ser parte de tus Eventos </h1>
+        <h1 style="text-align: center;"><em>Queremos ser parte de tus Eventos.</em></h1>
     </div>
 </div>
     <div class="row mt-4 mb-4">
-        {% for eventos in eventos %}
+        {% for eventos in public_eventos %}
             <div class="col-6 col-md-3">
-                <div class="card mb-4" style="width: 230px; ">
-                    <img src="{{ eventos.image_url }}" class="card-img-top" alt="" style="height: 200px">
-                <div class="card-body">
-                    <h5 class="card-title">
+                <div class="card mb-4 rounded" style="width: 300px; " >
+                    <img src="{{ eventos.image_url }}" class="card-img-top" alt="" style="height: 250px">
+                <div class="card-body" style="background-color: papayawhip;">
+                    <h5 class="card-title" style="background-color: papayawhip;">
                     {{ eventos.name }}
                     </h5>
-                    <p class="card-text">
+                    <p class="card-text" style="background-color: papayawhip;">
                         {{ eventos.description }}
                     </p>
                     <!-- <a ref="#" class="btn btn-primary">Go somewhere</a>-->

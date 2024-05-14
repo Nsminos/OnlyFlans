@@ -1,8 +1,33 @@
 
 <div class="container" style="background-color: plum;">
-    <div class="col text-center">
+    <div class="row text-center">
         {% load static %}
-        <p>Desarrollado por Nathalie Miño para Desafío Latam-2024@</p>
-        <img src="{% static 'OnlyFlans.png' %}" alt="logo" width="200px">
+        <p><em>Desarrollado por Nathalie Miño para Desafío Latam-2024@</em></p>
+        <div class="col" style="text-align: center;"></div>
+            <div class="col" style="text-align: center;">
+                <img src="{% static 'OnlyFlans.png' %}" alt="logo" width="200px"></div> 
+                <div class="col" color="black">
+                    
+                    <a href=""><i id="icono_github" class="fa-brands fa-square-github social_icon fa-2x" style="color:#FFFFFF;" data-bs-placement="bottom" data-bs-title="github"></i></a>
+                    <script>
+                    let Listener_github =document.getElementById("icono_github")
+                    let tooltip_github=new bootstrap.Tooltip(Listener_github)
+                    </script>
+                    <a href=""><i id="icono_twitter" class="fa-brands fa-square-twitter social_icon fa-2x" style="color:#FFFFFF;" data-bs-placement="bottom" data-bs-title="twitter"></i></i></a>
+                    <script>
+                    let Listener_twitter=document.getElementById("icono_twitter")
+                    let tooltip_twitter=new bootstrap.Tooltip(Listener_twitter)
+                    </script>
+                    <a  href=""></a><i id="icono_linkedin" class="fa-brands fa-linkedin social_icon fa-2x" style="color:#FFFFFF;"  data-bs-placement="bottom" data-bs-title="linkedin"></i></a>
+                    <script>
+                    let Listener_linkedin=document.getElementById("icono_linkedin")
+                    let tooltip_linkedin=new bootstrap.Tooltip(Listener_linkedin)
+                    </script>
+                    <a href=""><i id="icono_facebook" class="fa-brands fa-square-facebook social_icon fa-2x" style="color:#FFFFFF;" data-bs-placement="bottom" data-bs-title="facebook"></i></a>
+                    <script>
+                    let Listener_facebook=document.getElementById("icono_facebook")
+                    let tooltip_facebook=new bootstrap.Tooltip(Listener_facebook)
+                    </script>
+                </div>
     </div>
 </div>

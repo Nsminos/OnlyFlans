@@ -2,15 +2,23 @@
 
 {% block title %} Contacto OnlyFlans {% endblock title %}
 {% block content %}
-<div class= "container">
-    <h1>Contacto</h1>
+<div class= "container" style="background-color: palevioletred;">
+   <div class="col" style="text-align: center;"> <h1><em>Contacto</em></h1></div>
     <form action="{% url 'contacto'%}" method="post">
         {% csrf_token %}
 
-        <div class="mb-3 form-control">
-
-            {{form.as_p}}
-        
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Nombre</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+          </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
                   <label for="inputPassword6" class="col-form-label">Password</label>
@@ -28,9 +36,11 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    <p style="text-align: center;">**************************************************************************************************************************</p>
-</div>
+        <button type="submit" class="btn btn-outline-light">Enviar</button>
+        
+      
 
+      </form>
+      <p class="text-white" style="text-align: center">*******************************************************************************************************************************</p>
+    </div>
 {% endblock content %}

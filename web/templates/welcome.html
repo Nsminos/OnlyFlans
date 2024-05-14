@@ -6,10 +6,10 @@
   <div class="col">
       <div class="h-100 p-5 text-white bg-dark rounded-3">
           <h2>
-            Bienvenido {{ user.get_username }}
+            <em>Bienvenido {{ user.get_username }}</em>
           </h2>
-          <p>
-            Tenemos una lista de productos exclusivos para ti. ¿Quieres conocer más?
+          <p><em>
+            Tenemos una lista de productos exclusivos para ti. ¿Quieres conocer más?</em>
           </p>
           <a href="{% url 'acerca' %}" class="btn btn-outline-light">Contáctanos</a>
       </div>
@@ -17,7 +17,8 @@
 </div>
 <div class="row">
   <div class="col">
-    <h1>Bienvenido a sus Flanes Privados</h1>
+    <h1><em>Bienvenido a sus Flanes Privados</em></h1>
+    <h3 class="text-white"><em>¡Felicitaciones, por ser parte de nuestra familia Onlyflans puedes elegir del siguiente catalogo!</em></h3>
   </div>
 </div>
 
@@ -25,9 +26,9 @@
 <div class="row mt-4 mb-4">
   {% for flan in private_flans %}
       <div class="col-6 col-md-3">
-          <div class="card mb-4" style="width: 230px; ">
-              <img src="{{ flan.image_url }}" class="card-img-top" alt="" style="height: 200px">
-          <div class="card-body">
+          <div class="card mb-4 rounded" style="width: 300px; ">
+              <img src="{{ flan.image_url }}" class="card-img-top" alt="" style="height: 250px">
+          <div class="card-body" style="background-color: pink;">
               <h5 class="card-title">
               {{ flan.name }}
               </h5>
@@ -43,15 +44,15 @@
 </div>
 <div class="row">
   <div class="col">
-    <h1>Bienvenido a sus Eventos Privados</h1>
+    <h1><em>Bienvenido a sus Eventos Privados</em></h1>
   </div>
 </div>
 <div class="row mt-4 mb-4">
   {% for eventos in private_eventos %}
       <div class="col-6 col-md-3">
-          <div class="card mb-4" style="width: 230px; ">
-              <img src="{{ eventos.image_url }}" class="card-img-top" alt="" style="height: 200px">
-          <div class="card-body">
+          <div class="card mb-4 rounded" style="width: 300px; ">
+              <img src="{{ eventos.image_url }}" class="card-img-top" alt="" style="height: 250px">
+          <div class="card-body" style="background-color: plum;">
               <h5 class="card-title">
               {{ eventos.name }}
               </h5>

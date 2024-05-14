@@ -6,12 +6,12 @@
     <div class="col">
         <div class="h-100 p-5 text-white bg-pink rounded-3" >
             <h2 style="text-align: center;">
-                Nuestros productos
+                <em>Nuestros productos</em>
             </h2>
             <p style="text-align: center;">
-                OnlyFlans nace en el 2021 cuyo objetivo entregar a su clientela flanes de la mejor calidad
+                <em>OnlyFlans nace en el 2021 cuyo objetivo entregar a su clientela flanes de la mejor calidad.</em>
             </p>
-            <a href="{% url 'acerca' %}" class="btn btn-outline-light">Conoce más</a>
+            <a href="{% url 'acerca' %}" class="btn btn-outline-light"><em>Conoce más</em></a>
         </div>
     </div>
 </div>
@@ -40,8 +40,8 @@
     <div class="row mt-4 mb-4">
     {% for flan in public_flans %}
         <div class="col-6 col-md-3">
-            <div class="card mb-4" style="width: 280px; ">
-                <img src="{{ flan.image_url }}" class="card-img-top" alt="" style="height: 200px">
+            <div class="card mb-4" style="width: 300px; ">
+                <img src="{{ flan.image_url }}" class="card-img-top" alt="" style="height: 250px">
             <div class="card-body" style="background-color: pink;">
                 <h5 class="card-title">
                 {{ flan.name }}
@@ -57,7 +57,7 @@
     {% endfor %}
     
 </div>
-    <!--{{ flans }}-->
+    <!--{{ eventos }}-->
     <div class="row mt-4 mb-4">
       {% for eventos in public_eventos %}
       <div class="col-6 col-md-3">
