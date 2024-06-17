@@ -5,10 +5,10 @@
   <div class="row">
   <div class="col">
       <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2>
+          <h2 class="text-white">
             <em>Bienvenido {{ user.get_username }}</em>
           </h2>
-          <p><em>
+          <p class="text-white"><em>
             Tenemos una lista de productos exclusivos para ti. ¿Quieres conocer más?</em>
           </p>
           <a href="{% url 'acerca' %}" class="btn btn-outline-light">Contáctanos</a>
@@ -17,7 +17,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <h1><em>Bienvenido a sus Flanes Privados</em></h1>
+    <h1 class="text-white"><em>Bienvenido a sus Flanes Privados</em></h1>
     <h3 class="text-white"><em>¡Felicitaciones, por ser parte de nuestra familia Onlyflans puedes elegir del siguiente catalogo!</em></h3>
   </div>
 </div>
@@ -29,10 +29,10 @@
           <div class="card mb-4 rounded" style="width: 300px; ">
               <img src="{{ flan.image_url }}" class="card-img-top" alt="" style="height: 250px">
           <div class="card-body" style="background-color: pink;">
-              <h5 class="card-title">
+              <h5 class="card-title"style="text-white">
               {{ flan.name }}
               </h5>
-              <p class="card-text">
+              <p class="card-text"style="text-white">
                   {{ flan.description }}
               </p>
               <!-- <a ref="#" class="btn btn-primary">Go somewhere</a>-->
@@ -53,10 +53,10 @@
           <div class="card mb-4 rounded" style="width: 300px; ">
               <img src="{{ eventos.image_url }}" class="card-img-top" alt="" style="height: 250px">
           <div class="card-body" style="background-color: plum;">
-              <h5 class="card-title">
+              <h5 class="card-title text-white">
               {{ eventos.name }}
               </h5>
-              <p class="card-text">
+              <p class="card-text text-white">
                   {{ eventos.description }}
               </p>
               <!-- <a ref="#" class="btn btn-primary">Go somewhere</a>-->

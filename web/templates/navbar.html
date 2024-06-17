@@ -1,37 +1,36 @@
-<div class="container" style="background-color: palevioletred;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary ">
-  
-    {% load static %}
-    <a class="navbar-brand" href="#"><img src="{% static 'logo_flan.png' %}" alt="logo" style="width: 70px;" class="img-fluid"></a>
+{% load static %}
+<div class="container" style="background-color: pink">
+    <nav class="navbar navbar-expand-lg navbar bg-body-palevioletrad ">
+    <a class="navbar-brand" href="#"><img src="{% static 'flan-cake-logo.png' %}" alt="logo" style="width: 100px;" class="img-fluid"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align: left;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'indice' %}"><h5><em>Inicio</em></h5></a>
+          <a class="nav-link active" aria-current="page" href="{% url 'indice' %}"><h5 class="text-white"><em>Inicio</em></h5></a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{% url 'bienvenido' %}"><h5><em>Bienvenido</em></h5></a>
+          <a class="nav-link" aria-current="page" href="{% url 'bienvenido' %}"><h5 class="text-white"><em>Bienvenido</em></h5></a>
         </li>
         {% endif %}
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'acerca' %}"><h5><em>Acerca</em></h5></a>
+          <a class="nav-link active" aria-current="page" href="{% url 'acerca' %}"><h5 class="text-white"><em>Acerca</em></h5></a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{% url 'eventos' %}"><h5><em>Eventos</em></h5></a>
+          <a class="nav-link" aria-current="page" href="{% url 'eventos' %}"><h5 class="text-white"><em>Eventos</em></h5></a>
         </li>  
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{% url 'contacto' %}"><h5><em>Contacto</em></h5></a>
+          <a class="nav-link" aria-current="page" href="{% url 'contacto' %}"><h5 class="text-white"><em>Contacto</em></h5></a>
         </li> 
         {% if user.is_authenticated %}
               <li class="nav-item">
-                <a type="button" class="btn btn-outline-secondary" disabled aria-current="page" href="{% url 'logout' %}"><em>Cerrar Sesion</em></a>
+                <a type="button" class="btn btn-outline-secondary" disabled aria-current="page" href="{% url 'logout' %}"><em class="text-white">Cerrar Sesion</em></a>
               </li>
             {% else %}
               <li class="nav-item">
-                <a type="button" class="btn btn-outline-secondary" disabled aria-current="page" href="{% url 'login' %}"><em>Iniciar Sesion</em></a>
+                <a type="button" class="btn btn-outline-secondary" disabled aria-current="page" href="{% url 'login' %}"><em class="text-white">Iniciar Sesion</em></a>
               </li>
             {% endif %}
         </div>

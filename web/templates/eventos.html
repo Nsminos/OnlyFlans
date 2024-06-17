@@ -4,7 +4,7 @@
 <div class="container" style="background-color: palevioletred;">
     <div class="row">
         <div class="col">
-        <h1 style="text-align: center;"><em>Queremos ser parte de tus Eventos.</em></h1>
+        <h1 class="text-white"style="text-align: center;"><em>Queremos ser parte de tus Eventos.</em></h1>
     </div>
 </div>
     <div class="row mt-4 mb-4">
@@ -12,19 +12,19 @@
             <div class="col-6 col-md-3">
                 <div class="card mb-4 rounded" style="width: 300px; " >
                     <img src="{{ eventos.image_url }}" class="card-img-top" alt="" style="height: 250px">
-                <div class="card-body" style="background-color: papayawhip;">
-                    <h5 class="card-title" style="background-color: papayawhip;">
+                <div class="card-body" style="background-color: pink">
+                    <h5 class="card-title text-white" style="background-color: pink">
                     {{ eventos.name }}
                     </h5>
-                    <p class="card-text" style="background-color: papayawhip;">
+                    <p class="card-text text-white" style="background-color: pink">
                         {{ eventos.description }}
                     </p>
                     <!-- <a ref="#" class="btn btn-primary">Go somewhere</a>-->
                     
                 </div>
             </div>
-      </div>
+    </div>
         {% endfor %}
-      </div>
+    </div>
 </div>
 {% endblock content %}
